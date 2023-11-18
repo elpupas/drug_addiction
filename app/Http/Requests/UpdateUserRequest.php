@@ -2,9 +2,9 @@
 
 namespace App\Http\Requests;
 
-use App\Http\Requests\UserRegisterRequest;
+use Illuminate\Foundation\Http\FormRequest;
 
-class UpdateUserRequest extends UserRegisterRequest
+class UpdateUserRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,7 +23,7 @@ class UpdateUserRequest extends UserRegisterRequest
     {
         return [
             'age' => 'string',
-            'gender' => 'in:male,female,other',
+            'gender' => 'string|in:male,female,other',
             'location' => 'string'
         ];
     }
