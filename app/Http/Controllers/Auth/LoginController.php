@@ -12,13 +12,13 @@ class LoginController extends Controller
     {
         // Validate inputs
             $request->validate([
-                'email' => 'required|email',
+                'email' => 'required|email|unique:users',
                 'password' => 'required|string|min:8'
            ]);
            
         // Get user's credentials
            $credentials = [
-                'dni' => $request->dni,
+                'email' => $request->dni,
                 'password' => $request->password,
            ];
            
