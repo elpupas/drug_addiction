@@ -13,12 +13,12 @@ return new class extends Migration
     {
         Schema::create('alcohol_answers', function (Blueprint $table) {
             $table->id();
-             $table->unsignedBigInteger('question_id');
-    $table->string('answer');
-          $table->integer('score'); // Puntaje de 0 a 4 para esta respuesta
-    $table->timestamps();
+            $table->unsignedBigInteger('question_id');
+            $table->string('answer');
+            $table->integer('score'); // Puntaje de 0 a 4 para esta respuesta
+            $table->timestamps();
 
-    $table->foreign('question_id')->references('id')->on('alcohol_questions')->onDelete('cascade');
+            $table->foreign('question_id')->references('id')->on('alcohol_questions')->onDelete('cascade');
         });
     }
 

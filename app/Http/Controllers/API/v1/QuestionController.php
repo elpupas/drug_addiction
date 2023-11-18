@@ -11,33 +11,15 @@ use Illuminate\Support\Facades\DB;
 
 class QuestionController extends Controller
 {
-
-    public function questions()
+    public function index()
     {
-
         $preguntas = [
             AlcoholQuestion::all('id', 'question')
-
         ];
 
         return response()->json($preguntas);
     }
 
- /*    public function calcularPuntajeTotal(Request $request)
-    {
-        $respuestas = $request->input('users_answers'); // Obtener las respuestas enviadas
-        $totalScore = 0;
-
-        foreach ($respuestas as $respuestaId) {
-            $respuesta = AlcoholAnswer::with('answer')->find($respuestaId);
-
-            if ($respuesta && $respuesta->question) {
-                $totalScore += $respuesta->question->score;
-            }
-
-            return response()->json(['total_score' => $totalScore]);
-        }
-    } */
     public function calculateScore(Request $request)
     {
         $userAnswers = $request->input('user_answers');

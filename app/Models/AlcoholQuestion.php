@@ -9,11 +9,15 @@ class AlcoholQuestion extends Model
 {
     use HasFactory;
 
-    protected $fillable =[
-        'question'
-    ];
+    protected $fillable =['question'];
 
-    public function answer(){
+    public function questionnare()
+    {
+        return $this->belongsTo(Questionnare::class);
+    }
+
+    public function answer()
+    {
         return $this->hasMany(AlcoholAnswer::class);
     }
 }

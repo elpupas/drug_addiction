@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests;
+namespace App\Http\Requests\User;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class RegisterUserRequest extends FormRequest
+class UpdateUserRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,8 +22,9 @@ class RegisterUserRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'email' => 'required|email|unique',
-            'password' => 'srting|password|min:8',
+            'age' => 'string',
+            'gender' => 'string|in:male,female,other',
+            'location' => 'string'
         ];
     }
 }

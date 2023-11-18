@@ -10,13 +10,12 @@ class AlcoholAnswer extends Model
     use HasFactory;
 
     protected $fillable =[
-        'question_id',
         'answer',
         'score'
-
     ];
 
-    public function question(){
+    public function question()
+    {
         return $this->belongsTo(AlcoholQuestion::class);
     }
 

@@ -2,8 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\v1\UserController;
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
-use App\Http\Controllers\API\Auth\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +23,8 @@ Route::post('/login', [LoginController::class, 'login'])->name('login');
 Route::post('/forget-password', [UserController::class, 'forgetPassword'])->name('forget.password');
 Route::post('/reset-password/{token}', [UserController::class, 'resetPassword'])->name('reset.password');
 
+//resources
 Route::prefix('api/v1/')->group( function () {
     Route::apiResource('/users', UserController::class);
+    Route::apiResource('/questionnares', QuestionnareController::class);
 });
