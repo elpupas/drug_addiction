@@ -30,11 +30,21 @@ class LoginController extends Controller
                 return response()->json([
                     'result' => ['message' => 'Logged in successfully!', 
                     'access_token' => $token], 
-                    'status' => true]
+                    ]
                 );
             } else {
                 return response()->json(['result' => ['message' => 'Invalid credentials'], 'status' => false], 401);
             }
+    }
+
+    public function logout()
+    {
+        $user = Auth::user();
+   /** @var \App\Models\User $user * */
+        $user->tokens()->delete();
+
+        return response()->json(['message' => __('Desconnexió realitzada amb èxit')], 200);
+
     }
 
 }
