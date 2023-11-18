@@ -35,7 +35,7 @@ class UserController extends Controller
         if (!$user) {
             return response()->json([
                 'result' => [
-                    'message' => 'Something went wrong in the process',
+                    'message' => 'Something went wrong in the process.',
                 ],
                 'status' => 'false'
             ]);
