@@ -1,8 +1,9 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\v1\UserController;
+use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\API\Auth\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,9 +16,12 @@ use App\Http\Controllers\API\v1\UserController;
 |
 */
 
-// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-//     return $request->user();
-// });
+Route::post('/register', [RegisterController::class, 'register'])->name('register');
+Route::post('/login', [LoginController::class, 'login'])->name('login');
+
+// recovery password
+Route::post('/forget-password', [UserController::class, 'forgetPassword'])->name('forget.password');
+Route::post('/reset-password/{token}', [UserController::class, 'resetPassword'])->name('reset.password');
 
 Route::prefix('api/v1/')->group( function () {
     Route::apiResource('/users', UserController::class);

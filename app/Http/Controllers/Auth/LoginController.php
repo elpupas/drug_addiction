@@ -28,7 +28,7 @@ class LoginController extends Controller
                 $token = $user->createToken('authToken')->accessToken;
                 
                 return response()->json([
-                    'result' => ['message' => 'Logged in successfully!', 
+                    'result' => ['message' => 'Logged in successfully!',
                     'access_token' => $token], 
                     'status' => true]
                 );

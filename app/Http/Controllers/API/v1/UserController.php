@@ -7,6 +7,7 @@ use App\Models\User;
 use Illuminate\Support\Str;
 use App\Mail\ForgetPasswordMail;
 use Illuminate\Support\Facades\DB;
+use App\Http\Requests\ResetRequest;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ForgetRequest;
 use App\Http\Resources\UserResource;
@@ -73,6 +74,33 @@ class UserController extends Controller
             return response()->json(['message' => $exception->getMessage()], 404);
     
         }
+    
+    }
+
+    /**
+     * Reset password
+     */
+    public function resetPassword(ResetRequest $request){
+
+        $token = $request->route('token');
+    
+        $passwordResets= DB::table('password_reset_tokens')->where('token', $token)->first();
+        
+                        
+        if(!$passwordResets){
+    
+            return response()->json([
+                'error' => 'Invalid Token!'
+            ],400);
+        }
+        $user= User::where('email',$passwordResets->email)->first();
+        $user->password = Hash::make($request->password);
+        $user->save();
+        DB::table('password_reset_tokens')->where('email', $passwordResets->email)->delete();
+    
+        return response()->json([
+            'message' => 'User password reset successfully'
+        ],200);
     
     }
 
