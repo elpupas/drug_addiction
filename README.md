@@ -10,7 +10,8 @@
 # API REST para Aplicación de Seguimiento de Consumo de Drogas (Alcohol)
 
 
-Aplicación de seguimiento de consumo de drogas (alcohol),  con asesoramiento personalizado, conectando con centros públicos de salud locales. Tecnologías escalables basadas en Restful API. Perfil de nivel de riesgo personalizado e historial de consumo.
+Aplicación de seguimiento de consumo de drogas (alcohol), perfil de nivel de riesgo e historial de consumo, con asesoramiento personalizado, conectando con centros públicos de salud locales. 
+Restful API escalable, mantenible para poder usar con cualquier cliente Front-end.
 
 ## Figma prototype
 https://www.figma.com/file/U3PmMKd0BZpwJwyoBFqrjS/Drug_On?type=design&node-id=0-1&mode=design&t=KMUaN3jIHMH9VKvW-0
