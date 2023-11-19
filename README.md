@@ -6,6 +6,8 @@
 
 Este proyecto consiste en una API REST desarrollada en Laravel que forma parte de una aplicación de seguimiento de consumo de drogas, específicamente alcohol. La API proporciona funcionalidades para evaluar el nivel de riesgo del usuario, ofrecer feedback y compartir experiencias con otros usuarios. Además, incluye información relevante sobre drogas, adicción y medidas de prevención.
 
+## Figma prototype
+https://www.figma.com/file/U3PmMKd0BZpwJwyoBFqrjS/Drug_On?type=design&node-id=0-1&mode=design&t=KMUaN3jIHMH9VKvW-0
 ## Funcionalidades Principales
 
 - **Evaluación de Riesgo:** La API ofrece herramientas para evaluar el patrón de consumo de alcohol de los usuarios, identificar comportamientos de riesgo y proporcionar recomendaciones para reducir o controlar dicho consumo.
