@@ -1,10 +1,16 @@
 <p align="center"><img src="https://i.ibb.co/zS6Jzpg/Vector.png" width="300" alt="dados"></a></p>
 
+- **Diagnostico** 
+- **Rapido** 
+- **Urgencia**
+- **Graves**
+- **ON**
 <!-- API REST para Aplicación de Seguimiento de Consumo de Drogas (Alcohol) -->
 
 # API REST para Aplicación de Seguimiento de Consumo de Drogas (Alcohol)
 
-Este proyecto consiste en una API REST desarrollada en Laravel que forma parte de una aplicación de seguimiento de consumo de drogas, específicamente alcohol. La API proporciona funcionalidades para evaluar el nivel de riesgo del usuario, ofrecer feedback y compartir experiencias con otros usuarios. Además, incluye información relevante sobre drogas, adicción y medidas de prevención.
+
+Aplicación de seguimiento de consumo de drogas (alcohol),  con asesoramiento personalizado, conectando con centros públicos de salud locales. Tecnologías escalables basadas en Restful API. Perfil de nivel de riesgo personalizado e historial de consumo.
 
 ## Figma prototype
 https://www.figma.com/file/U3PmMKd0BZpwJwyoBFqrjS/Drug_On?type=design&node-id=0-1&mode=design&t=KMUaN3jIHMH9VKvW-0
@@ -27,7 +33,7 @@ https://www.figma.com/file/U3PmMKd0BZpwJwyoBFqrjS/Drug_On?type=design&node-id=0-
 2. Instala las dependencias utilizando Composer:
 
     ```
-    composer install
+    composer install or composer update
     ```
 
 3. Configura la base de datos en el archivo `.env`:
