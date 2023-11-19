@@ -4,7 +4,7 @@
 - **Rapido** 
 - **Urgencia**
 - **Graves**
-- **ON**
+- **ON (OFF)**
 <!-- API REST para Aplicación de Seguimiento de Consumo de Drogas (Alcohol) -->
 
 # API REST para Aplicación de Seguimiento de Consumo de Drogas (Alcohol)
