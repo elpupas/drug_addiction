@@ -14,7 +14,7 @@ Aplicación de seguimiento de consumo de drogas (alcohol), perfil de nivel de ri
 Restful API escalable, mantenible para poder usar con cualquier cliente Front-end.
 
 ## Figma prototype
-Puedes encontrarlo  <a href="https://www.figma.com/file/U3PmMKd0BZpwJwyoBFqrjS/Drug_On?type=design&node-id=0-1&mode=design&t=KMUaN3jIHMH9VKvW-0">aquí</a>.
+Puedes encontrarlo  <a href="https://www.figma.com/file/U3PmMKd0BZpwJwyoBFqrjS/Drug_On?type=design&node-id=0-1&mode=design&t=KMUaN3jIHMH9VKvW-0" target="_blank">aquí</a>.
 ## Funcionalidades Principales
 
 - **Evaluación de Riesgo:** La API ofrece herramientas para evaluar el patrón de consumo de alcohol de los usuarios, identificar comportamientos de riesgo y proporcionar recomendaciones para reducir o controlar dicho consumo.
