@@ -9,5 +9,5 @@ interface AsnwerAlcoholInterface
 {
     public function calculateScore(Request $request);
     public function evalueRisk($score);
-    function obtenerFeedback($nivelRiesgo);
+    public function obtenerFeedback($nivelRiesgo);
 }
